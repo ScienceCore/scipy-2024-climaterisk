@@ -1,0 +1,22 @@
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.netrc
+
+# Jupyter Notebook
+.ipynb_checkpoints
+book/*.ipynb
+
+# Jupyter Book
+book/_build
