@@ -1,19 +1,21 @@
 # This script generates .netrc file, prompting user for EarthData credentials.
-# Delete or rename ~/.netrc before executing this script
-# (it will not overwrite pre-existing ~/.netrc file).
+# Delete or rename ~/.netrc before executing this script (it won't overwrite a
+# pre-existing ~/.netrc file).
 
 from getpass import getpass
 from pathlib import Path
 import sys
 
 NETRC_PATH = Path('~/.netrc').expanduser()
-TEMPLATE = "machine urs.earthdata.nasa.gov login {USERNAME} password {PASSWORD}\n"
+TEMPLATE = " ".join(["machine", "urs.earthdata.nasa.gov", "login",
+                     "{USERNAME}", "password", "{PASSWORD}\n"])
 
 if NETRC_PATH.exists():
-    print("Warning: .netrc exists already; back up to avoid losing credentials")
+    print("Warning: ~/.netrc exists already (this script won't overwrite).")
+    print("         Delete ~/.netrc first or back up to avoid losing credentials.")
     sys.exit(1)
 
-username = getpass(prompt="NASA EarthData login:    ")
+username = input("NASA EarthData login:    ")
 password = getpass(prompt="NASA EarthData password: ")
 
 NETRC_PATH.write_text(TEMPLATE.format(USERNAME=username, PASSWORD=password))
