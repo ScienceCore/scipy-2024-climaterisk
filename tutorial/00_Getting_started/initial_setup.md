@@ -1,7 +1,7 @@
 # Initial Setup 
 
 ## 1- Accesing to the 2i2c Hub
-To login to the 2i2c Hub, follow these simple steps:
+#### To login to the 2i2c Hub, follow these simple steps:
 
 * **Head to the Hub:** Visit this link to access the 2i2c Hub: https://climaterisk.opensci.2i2c.cloud/.
 
