@@ -7,9 +7,9 @@ To login to the 2i2c Hub, follow these simple steps:
 
 * **Log in with your Credentials:**
 
-**Username:** Feel free to choose any username you like.  Te recommend your GitHub username helps avoid conflicts with others.
+    **Username:** Feel free to choose any username you like.  Te recommend your GitHub username helps avoid conflicts with others.
 
-**Password:** You'll receive the password the day before the tutorial.
+    **Password:** You'll receive the password the day before the tutorial.
 
 
 ![2i2c_login](../assets/2i2c_login.png)
