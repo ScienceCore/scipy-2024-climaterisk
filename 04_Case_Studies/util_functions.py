@@ -74,19 +74,17 @@ def urls_to_dataset(granule_dataframe):
         lon = np.arange(xmin, xmax, x_res)
         lat = np.arange(ymax, ymin, -y_res)
 
-        lon_grid, lat_grid = np.meshgrid(lon, lat)
-
         da = xr.DataArray(
             data=img,
-            dims=["band", "y", "x"],
+            dims=["band", "lat", "lon"],
             coords=dict(
-                lon=(["y", "x"], lon_grid),
-                lat=(["y", "x"], lat_grid),
+                lon=(["lon"], lon),
+                lat=(["lat"], lat),
                 time=i,
                 band=np.arange(img.shape[0])
             ),
             attrs=dict(
-                description="OPERA DIST data",
+                description="OPERA DSWx B01",
                 units=None,
             ),
         )
